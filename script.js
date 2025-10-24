@@ -14,7 +14,7 @@ function checkGuess() {
   // Validación
   if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
     feedback.textContent = "Por favor, ingresa un número válido entre 1 y 100.";
-    feedback.style.color = "red";
+    feedback.style.color = "white";
     return;
   }
 
@@ -23,14 +23,14 @@ function checkGuess() {
   // Comparación con el número secreto
   if (userGuess === secretNumber) {
     feedback.textContent = `🎉 ¡Correcto! Adivinaste el número ${secretNumber} en ${attempts} intento(s).`;
-    feedback.style.color = "green";
+    feedback.style.color = "white";
     checkButton.disabled = true; // Deshabilitar botón
   } else if (userGuess < secretNumber) {
     feedback.textContent = "📉 Demasiado bajo. Intenta con un número más grande.";
-    feedback.style.color = "blue";
+    feedback.style.color = "white";
   } else {
     feedback.textContent = "📈 Demasiado alto. Intenta con un número más pequeño.";
-    feedback.style.color = "brown";
+    feedback.style.color = "white";
   }
 
   attemptsDisplay.textContent = `Intentos realizados: ${attempts}`;
